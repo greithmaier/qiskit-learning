@@ -45,7 +45,7 @@ sampler = StatevectorSampler()
 job = sampler.run([qc_measured], shots=10000)
 result = job.result()
 print(f" > Counts: {result[0].data['meas'].get_counts()}")
-print(qc_measured.draw(output="text"))  # Draw Circuit Diagram
+print(qc_measured.draw(output="text"))  # >>> Draw Circuit Diagram <<< (this is very nice)
 
 
 # 4. Graphical output
