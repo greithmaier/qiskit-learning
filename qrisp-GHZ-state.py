@@ -1,17 +1,17 @@
+import os
 from qrisp import *
 from matplotlib import pyplot as plt
 
 # This example creates a GHZ state, replace it with your own code
-qv = QuantumVariable(3)
+qv = QuantumVariable(5)
 h(qv[0])
 cx(qv[0], qv[1])
 cx(qv[0], qv[2])
-
-# Execute it on the quantum computing backend
-# Transpilation is taken care of automatically
-result = qv.get_measurement(backend = quantum_computer)
+cx(qv[0], qv[3])
+cx(qv[0], qv[4])
 
 # Print and plot the result
+result = qv.get_measurement()
 print(result)
 
 plt.bar(result.keys(), result.values())

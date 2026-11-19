@@ -14,3 +14,6 @@ a = QuantumFloat(2)
 a[:] = 1
 b = a + a
 b.get_measurement(backend = backend, shots=2000)
+
+# so far not working, since iqm's qrisp package seem sto be incopatible with python 3.15
+# ...(and also 3.14 which i tried via venv?)
